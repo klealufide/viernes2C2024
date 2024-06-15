@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca Aserri</title>
-    <link rel="stylesheet" href="./css/styles.css">\
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Biblioteca Aserri</h1>
+        <h1 id="titulo">Biblioteca Aserri</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -49,7 +48,7 @@
                     <p>Utiliza nuestros recursos digitales para tus necesidades educativas y de investigación.</p>
                 </div>
                 <div class="service-box">
-                    <img src="./images/servicio3.jpg" alt="Servicio 3">
+                    <img src="./images/servicio3.jpg" alt="Servicio 3" id="imagen">
                     <h3>Eventos y Talleres</h3>
                     <p>Participa en eventos y talleres organizados por la biblioteca.</p>
                 </div>
@@ -89,13 +88,16 @@
                 <label>Mensaje:</label>
                 <textarea></textarea>
                 <br>
-                <button type="submit">Enviar</button>
+                <button type="button" id="btnEnviar">Enviar</button>
             </form>
+        </section>
+        <section>
+            <h1 id="contador"></h1>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Biblioteca Aserrí. Todos los derechos reservados.</p>
     </footer>
 </body>
-
+<script src="./js/script.js"></script>
 </html>
