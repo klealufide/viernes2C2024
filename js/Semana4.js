@@ -1,4 +1,8 @@
 // EJERCICIOS #1
+let nombre = "Karol";
+
+nombre.substring(1,4);
+
 
 const edadLegal = 18;
 const notaAprobatoria = 70;
@@ -87,6 +91,18 @@ function tablaDeMultiplicarDel7() {
 }
 
 tablaDeMultiplicarDel7();
+
+function sumarPares() {
+    let sumaPares = 0;
+    for (let numero = 1; numero <= 10; numero++) {
+        if (numero % 2 === 0) {
+            sumaPares += numero;
+        }
+    }
+    return sumaPares;
+}
+
+console.log("La suma de todos los números pares del 1 al 10 es:", sumarPares());
 
 
 //document.addEventListener("DOMContentLoaded", function() {
