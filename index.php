@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +24,16 @@
                 <li><a href="#">Catalogo</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
-                <li><a href="#">Inicio sesion</a></li>
+                <?php
+                if (isset($_SESSION["usuario"]) && $_SESSION["usuario"] != "") {
+                ?>
+                    <li><a href="ingresar.php">Salir</a></li>
+                <?php
+                } else { ?>
+                    <li><a href="ingresar.php">Inicio sesion</a></li>
+                <?php    }
+                ?>
+
             </ul>
         </nav>
     </header>

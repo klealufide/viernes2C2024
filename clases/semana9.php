@@ -1,5 +1,5 @@
 <?php
-/*
+
 
 $servername = "localhost";
 $username ="root";
@@ -14,7 +14,7 @@ if($conn->connect_error){
 
 echo "Conexion es exitosa";
 
-
+/*
 // CRUD
 
 // CREATE ->INSERT
@@ -82,3 +82,11 @@ if(password_verify($clave,$hash)){
 }
 
 
+
+$sql = "INSERT INTO `usuarios`( `usuario`, `clave`, `nombre`, `email`) VALUES ('kleal','$hash','Karol','k@l.com');";
+
+if($conn->query($sql) === TRUE){
+    echo "Registro agregado exitosamente! <br>";
+} else {
+    echo "Error al agregar un registro! <br>";
+}
