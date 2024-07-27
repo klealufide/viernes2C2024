@@ -134,3 +134,12 @@ footer {
 footer p {
     margin: 0;
 }
+
+
+
+.footer2 {
+    background-color: #782222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
