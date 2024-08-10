@@ -1,6 +1,6 @@
 <?php
-session_start();
-
+include("functions.php");
+$menu = getMenu();
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +9,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca Aserri</title>
-    <link rel="stylesheet" href="./css/styles.css">\
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/jquery-3.7.1.slim.min.js"></script>
+    <script src="./js/scriptv1.js"></script>
 </head>
 
 <body>
@@ -18,22 +19,9 @@ session_start();
         <h1>Biblioteca Aserri</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Prestamo</a></li>
-                <li><a href="#">Catalogo</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="contacto.php">Contacto</a></li>
-                <?php
-                if (isset($_SESSION["usuario"]) && $_SESSION["usuario"] != "") {
-                ?>
-                    <li><a href="ingresar.php">Salir</a></li>
-                <?php
-                } else { ?>
-                    <li><a href="ingresar.php">Inicio sesion</a></li>
-                <?php    }
-                ?>
-
+                <?php foreach ($menu as $item) { ?>
+                    <li><a href="<?php echo $item["url"] ?>"><?php echo $item["name"] ?></a></li>
+                <?php } ?>
             </ul>
         </nav>
     </header>

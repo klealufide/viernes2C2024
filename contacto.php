@@ -10,8 +10,8 @@ session_start();
     <meta charset="UTF-8">
     <title>Biblioteca Aserri</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/jquery-3.7.1.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/jquery-3.7.1.slim.min.js"></script>
 </head>
 
 <body>
@@ -39,17 +39,17 @@ session_start();
                     session_destroy();
                 }
             ?>
-            <form method="post" action="procesar_contacto.php">
+            <form>
                 <label>Nombre:</label>
-                <input type="text" name="nombre">
+                <input type="text" name="nombre" id="nombre">
                 <br>
                 <label>Correo electrónico:</label>
-                <input type="email" name="email">
+                <input type="email" name="email" id="email">
                 <br>
                 <label>Mensaje:</label>
-                <textarea name="mensaje"></textarea>
+                <textarea name="mensaje" id="mensaje"></textarea>
                 <br>
-                <button type="submit">Enviar</button>
+                <button type="button" id="enviar_formulario">Enviar</button>
             </form>
         </section>
     </main>
